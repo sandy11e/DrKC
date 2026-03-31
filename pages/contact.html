@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact | Dr. Krishnan Chandrasekharan</title>
+    <meta name="description" content="Get in touch with Dr. Krishnan Chandrasekharan for corporate training, executive coaching, keynote speaking, and leadership consulting.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root {
+            --blue-900: #0a1628;
+            --blue-800: #102040;
+            --blue-700: #1a3560;
+            --blue-600: #1e4080;
+            --blue-500: #1d4ed8;
+            --blue-400: #3b82f6;
+            --blue-300: #93c5fd;
+            --blue-200: #bfdbfe;
+            --blue-100: #dbeafe;
+            --blue-50:  #eff6ff;
+            --white:    #ffffff;
+            --grey-50:  #f8fafc;
+            --grey-100: #f1f5f9;
+            --grey-200: #e2e8f0;
+            --grey-300: #cbd5e1;
+            --grey-500: #64748b;
+            --grey-700: #334155;
+            --ink:      #0f172a;
+            --green:    #25D366;
+            --green-dark: #1da851;
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 36px;
+            --radius-full: 9999px;
+            --shadow-xs:  0 1px 4px rgba(15,23,42,0.06);
+            --shadow-sm:  0 2px 12px rgba(15,23,42,0.08);
+            --shadow-md:  0 8px 32px rgba(15,23,42,0.10);
+            --shadow-lg:  0 20px 60px rgba(15,23,42,0.13);
+            --shadow-xl:  0 32px 80px rgba(15,23,42,0.16);
+            --shadow-blue: 0 12px 40px rgba(29,78,216,0.22);
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --tr: all 0.38s var(--ease);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--white); color: var(--ink); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--grey-100); }
+        ::-webkit-scrollbar-thumb { background: var(--blue-400); border-radius: 10px; }
+        ::selection { background: var(--blue-100); color: var(--blue-800); }
+
+        /* UTILS */
+        .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); }
+        .sec  { padding: clamp(72px, 9vw, 128px) 0; }
+        .sec-sm { padding: clamp(48px, 6vw, 80px) 0; }
+
+        .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue-500); }
+        .eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--blue-500); border-radius: 2px; flex-shrink: 0; }
+        .eyebrow.ctr { justify-content: center; }
+        .eyebrow.ctr::before { display: none; }
+        .eyebrow.ctr::after { content: ''; width: 22px; height: 2px; background: var(--blue-500); border-radius: 2px; flex-shrink: 0; }
+        .eyebrow.lt { color: var(--blue-300); }
+        .eyebrow.lt::before { background: var(--blue-400); }
+
+        .rule { width: 44px; height: 3px; background: var(--blue-500); border-radius: 2px; margin: 16px 0 26px; }
+        .rule.ctr { margin: 16px auto 26px; }
+        .rule.lt { background: var(--blue-400); }
+
+        .hd { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 4.6rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.01em; color: var(--ink); }
+        .hd em { font-style: italic; color: var(--blue-500); }
+        .hd.w { color: var(--white); }
+        .hd.w em { color: var(--blue-300); }
+        .hs { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.6rem); font-weight: 700; line-height: 1.15; color: var(--ink); }
+        .hs em { font-style: italic; color: var(--blue-500); }
+
+        /* BUTTONS */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-body); font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; border: none; border-radius: var(--radius-full); padding: 15px 32px; transition: var(--tr); white-space: nowrap; cursor: pointer; width: 100%; }
+        .btn .arr { transition: transform 0.3s var(--ease); }
+        .btn:hover .arr { transform: translateX(4px); }
+        .btn-blue { background: var(--blue-500); color: var(--white); box-shadow: var(--shadow-blue); }
+        .btn-blue:hover { background: var(--blue-700); color: var(--white); transform: translateY(-2px); box-shadow: 0 18px 52px rgba(29,78,216,0.35); }
+        .btn-wa { background: var(--green); color: var(--white); box-shadow: 0 12px 40px rgba(37,211,102,0.3); }
+        .btn-wa:hover { background: var(--green-dark); color: var(--white); transform: translateY(-2px); box-shadow: 0 18px 52px rgba(37,211,102,0.4); }
+        .btn-outline-blue { background: transparent; color: var(--blue-600); border: 2px solid var(--blue-200); padding: 13px 32px; }
+        .btn-outline-blue:hover { background: var(--blue-500); color: var(--white); border-color: var(--blue-500); }
+        .btn-white { background: var(--white); color: var(--blue-700); box-shadow: var(--shadow-md); }
+        .btn-white:hover { background: var(--grey-50); color: var(--blue-800); transform: translateY(-2px); }
+
+        /* NAV */
+        #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: var(--tr); width: 100%; }
+        .nb { display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px,5vw,72px); height: 72px; background: rgba(255,255,255,0.92); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border-bottom: 1px solid rgba(29,78,216,0.07); transition: var(--tr); }
+        #nav.sc .nb { height: 64px; box-shadow: var(--shadow-md); border-bottom-color: var(--grey-200); }
+        .nbrand { font-family: var(--font-display); font-size: clamp(13px,1.5vw,16px); font-weight: 700; color: var(--blue-900); text-decoration: none; line-height: 1.2; }
+        .nbrand em { font-style: italic; color: var(--blue-500); font-weight: 400; }
+        .nav-pic { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--blue-200); margin-right: 12px; display: block; flex-shrink: 0; }
+        .nbrand-wrap { display: flex; align-items: center; gap: 0; }
+        .nlinks { display: flex; align-items: center; gap: clamp(16px,2.5vw,36px); list-style: none; }
+        .nlinks a { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-500); text-decoration: none; transition: color 0.25s; position: relative; }
+        .nlinks a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--blue-500); border-radius: 2px; transform: scaleX(0); transition: transform 0.3s var(--ease); }
+        .nlinks a:hover, .nlinks a.act { color: var(--blue-600); }
+        .nlinks a:hover::after, .nlinks a.act::after { transform: scaleX(1); }
+        .ncta { font-size: 12px; font-weight: 700; padding: 10px 22px; border-radius: var(--radius-full); background: var(--blue-500); color: var(--white) !important; text-decoration: none; transition: var(--tr); }
+        .ncta:hover { background: var(--blue-700); transform: translateY(-1px); }
+        .ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+        .ham span { display: block; width: 22px; height: 2px; background: var(--blue-800); border-radius: 2px; transition: var(--tr); }
+        .ham.op span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+        .ham.op span:nth-child(2) { opacity: 0; width: 0; }
+        .ham.op span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+        .drw { display: none; position: fixed; top: 72px; left: 0; right: 0; z-index: 999; background: rgba(255,255,255,0.98); backdrop-filter: blur(24px); border-bottom: 1px solid var(--grey-200); flex-direction: column; box-shadow: var(--shadow-lg); transform: translateY(-8px); opacity: 0; transition: var(--tr); pointer-events: none; }
+        .drw.op { display: flex; transform: translateY(0); opacity: 1; pointer-events: all; }
+        .drw a { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-700); text-decoration: none; padding: 18px clamp(20px,5vw,72px); border-bottom: 1px solid var(--grey-100); transition: all 0.2s; }
+        .drw a:hover { color: var(--blue-600); background: var(--blue-50); }
+        .drw .mcta { background: var(--blue-500); color: var(--white) !important; text-align: center; margin: 16px clamp(20px,5vw,72px) 24px; border-radius: var(--radius-full); border-bottom: none !important; }
+        .drw .mcta:hover { background: var(--blue-700); }
+        @media(max-width:860px) { .nlinks, .ncta-w { display: none; } .ham { display: flex; } }
+
+        /* PAGE HERO */
+        .page-hero { margin-top: 72px; background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 55%, var(--blue-700) 100%); padding: clamp(72px,10vw,130px) 0 clamp(64px,8vw,110px); position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(147,197,253,1) 1px, transparent 1px); background-size: 44px 44px; opacity: 0.06; }
+        .page-hero::after { content: 'HELLO'; position: absolute; right: -10px; bottom: -30px; font-family: var(--font-display); font-size: 20vw; font-weight: 700; color: rgba(255,255,255,0.025); line-height: 1; pointer-events: none; }
+        .ph-inner { position: relative; z-index: 1; }
+        .ph-inner h1 { font-family: var(--font-display); font-size: clamp(2.8rem,6vw,5.5rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.015em; color: var(--white); }
+        .ph-inner h1 em { font-style: italic; color: var(--blue-300); }
+        .ph-inner p { font-size: clamp(15px,1.7vw,18px); color: rgba(255,255,255,0.52); margin-top: 18px; max-width: 540px; line-height: 1.8; }
+
+        /* MAIN CONTACT LAYOUT */
+        .contact-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(40px,5vw,80px); align-items: start; }
+        @media(max-width:900px) { .contact-layout { grid-template-columns: 1fr; } }
+
+        /* INFO SIDE */
+        .contact-info-title { font-family: var(--font-display); font-size: clamp(1.8rem,3.5vw,3rem); font-weight: 700; line-height: 1.12; color: var(--ink); margin-bottom: 14px; }
+        .contact-info-title em { font-style: italic; color: var(--blue-500); }
+        .contact-intro { font-size: 15px; line-height: 1.8; color: var(--grey-500); margin-bottom: 40px; }
+
+        /* Contact detail items */
+        .cdetail-list { list-style: none; }
+        .cdetail { display: flex; align-items: flex-start; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--grey-100); transition: var(--tr); }
+        .cdetail:first-child { padding-top: 0; }
+        .cdetail:last-child { border-bottom: none; }
+        .cdetail-icon { width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--blue-50); display: flex; align-items: center; justify-content: center; color: var(--blue-500); font-size: 1rem; flex-shrink: 0; transition: var(--tr); }
+        .cdetail:hover .cdetail-icon { background: var(--blue-500); color: var(--white); }
+        .cdetail-body { flex: 1; }
+        .cdetail-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey-500); margin-bottom: 4px; }
+        .cdetail-value { font-weight: 700; font-size: 14px; color: var(--ink); margin-bottom: 2px; }
+        .cdetail-link { font-size: 13px; color: var(--blue-500); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; transition: color 0.25s; }
+        .cdetail-link:hover { color: var(--blue-700); }
+        .cdetail-link.wa { color: var(--green); }
+        .cdetail-link.wa:hover { color: var(--green-dark); }
+
+        /* Quick contact chips */
+        .quick-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+        .qchip { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; text-decoration: none; transition: var(--tr); border: 1.5px solid; }
+        .qchip-li { color: #0077b5; border-color: #c4dde8; background: #f0f7fb; }
+        .qchip-li:hover { background: #0077b5; color: var(--white); border-color: #0077b5; transform: translateY(-2px); }
+        .qchip-wa { color: var(--green-dark); border-color: #c3e6cb; background: #f0fff4; }
+        .qchip-wa:hover { background: var(--green); color: var(--white); border-color: var(--green); transform: translateY(-2px); }
+
+        /* FORM SIDE */
+        .form-card {
+            background: var(--white); border: 1px solid var(--grey-200);
+            border-radius: var(--radius-xl); padding: clamp(28px,4vw,52px);
+            box-shadow: var(--shadow-lg); position: relative; overflow: hidden;
+        }
+        .form-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-500), var(--blue-300)); }
+
+        .form-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--blue-50); border: 1px solid var(--blue-100); border-radius: var(--radius-full); padding: 6px 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue-600); margin-bottom: 24px; }
+        .form-badge i { color: var(--blue-500); font-size: 10px; }
+
+        .form-title { font-family: var(--font-display); font-size: clamp(1.5rem,2.5vw,2rem); font-weight: 700; color: var(--ink); margin-bottom: 28px; line-height: 1.2; }
+        .form-title em { font-style: italic; color: var(--blue-500); }
+
+        .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media(max-width:560px) { .frow { grid-template-columns: 1fr; } }
+
+        .fg { margin-bottom: 18px; }
+        .fg label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey-500); margin-bottom: 8px; }
+        .fg label span { color: #e74c3c; margin-left: 2px; }
+        .fi { width: 100%; padding: 13px 16px; border: 1.5px solid var(--grey-200); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 14px; color: var(--ink); background: var(--white); transition: border-color 0.25s, box-shadow 0.25s; }
+        .fi:focus { outline: none; border-color: var(--blue-400); box-shadow: 0 0 0 3px var(--blue-50); }
+        .fi::placeholder { color: var(--grey-300); }
+        textarea.fi { resize: vertical; min-height: 120px; }
+        select.fi { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+
+        .form-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+        @media(max-width:480px) { .form-btns { grid-template-columns: 1fr; } }
+        .form-note { font-size: 12px; color: var(--grey-500); text-align: center; margin-top: 16px; line-height: 1.6; }
+        .form-note i { color: var(--blue-400); margin-right: 4px; }
+
+        /* SUCCESS STATE */
+        .form-success { display: none; text-align: center; padding: 40px 20px; }
+        .form-success i { font-size: 3rem; color: var(--blue-500); margin-bottom: 16px; display: block; }
+        .form-success h4 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; }
+        .form-success p { font-size: 14px; color: var(--grey-500); line-height: 1.7; }
+
+        /* SERVICES GRID */
+        .svc-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+        @media(max-width:860px) { .svc-grid { grid-template-columns: 1fr 1fr; } }
+        @media(max-width:500px) { .svc-grid { grid-template-columns: 1fr; } }
+
+        .svc-card { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius-lg); padding: clamp(22px,3vw,36px); text-align: center; transition: var(--tr); cursor: default; }
+        .svc-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--blue-200); }
+        .svc-icon { width: 60px; height: 60px; border-radius: 50%; background: var(--blue-50); display: flex; align-items: center; justify-content: center; color: var(--blue-500); font-size: 1.3rem; margin: 0 auto 18px; transition: var(--tr); }
+        .svc-card:hover .svc-icon { background: var(--blue-500); color: var(--white); box-shadow: var(--shadow-blue); }
+        .svc-card h5 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+        .svc-card p { font-size: 13px; color: var(--grey-500); line-height: 1.65; }
+
+        /* PROCESS STRIP */
+        .process-strip { background: var(--blue-900); }
+        .proc-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; }
+        .proc-item { padding: clamp(28px,4vw,48px) clamp(18px,2.5vw,32px); border-right: 1px solid rgba(255,255,255,0.08); position: relative; }
+        .proc-item:last-child { border-right: none; }
+        .proc-num { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: rgba(59,130,246,0.18); line-height: 1; margin-bottom: 14px; }
+        .proc-item h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+        .proc-item p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+        @media(max-width:720px) { .proc-grid { grid-template-columns: 1fr 1fr; } .proc-item:nth-child(2){border-right:none;} .proc-item:nth-child(1),.proc-item:nth-child(2){border-bottom:1px solid rgba(255,255,255,0.08);} }
+        @media(max-width:420px) { .proc-grid { grid-template-columns: 1fr; } .proc-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); } .proc-item:last-child { border-bottom: none; } }
+
+        /* CTA BAND */
+        .cta-band { background: var(--blue-600); }
+        .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+        .cta-inner h2 { font-family: var(--font-display); font-size: clamp(1.4rem,3vw,2.3rem); font-weight: 600; color: var(--white); max-width: 560px; line-height: 1.25; }
+        .cta-inner h2 em { font-style: italic; color: var(--blue-200); }
+
+        /* FOOTER */
+        footer { background: var(--blue-900); color: rgba(255,255,255,0.5); padding: clamp(48px,6vw,80px) 0 28px; }
+        .fgrid { display: grid; grid-template-columns: 1.8fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        @media(max-width:700px) { .fgrid { grid-template-columns: 1fr; gap: 28px; } }
+        .fbrand { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--white); text-decoration: none; display: block; margin-bottom: 12px; }
+        .fbrand em { font-style: italic; color: var(--blue-300); font-weight: 400; }
+        .fdesc { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.36); }
+        .fcol h6 { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+        .fcol a { display: block; font-size: 13px; color: rgba(255,255,255,0.38); text-decoration: none; margin-bottom: 10px; transition: color 0.25s; }
+        .fcol a:hover { color: var(--blue-300); }
+        .fbot { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+        .fbot p { font-size: 12px; }
+        .fsoc { display: flex; gap: 12px; }
+        .fsoc a { width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.38); font-size: 13px; text-decoration: none; transition: var(--tr); }
+        .fsoc a:hover { background: var(--blue-500); border-color: var(--blue-500); color: var(--white); transform: translateY(-2px); }
+
+        .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; width: 52px; height: 52px; border-radius: 50%; background: #25D366; color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; text-decoration: none; box-shadow: 0 8px 32px rgba(37,211,102,0.4); transition: var(--tr); }
+        .wa-float:hover { transform: scale(1.1); background: #1da851; color: var(--white); }
+
+        /* REVEAL */
+        .rev { opacity: 0; transform: translateY(26px); transition: opacity 0.65s var(--ease), transform 0.65s var(--ease); }
+        .rev.in { opacity: 1; transform: translateY(0); }
+        .d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; } .d3 { transition-delay: 0.3s; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+    <div class="nb">
+        <div class="nbrand-wrap">
+            <img src="../images/profile.jpg" onerror="this.src='https://images.unsplash.com/photo-1560250056-07ba644d8ad3?auto=format&fit=crop&q=80&w=800'" class="nav-pic" alt="Dr. Krishnan">
+            <a href="../index.html" class="nbrand">Dr. Krishnan <em>Chandrasekharan</em></a>
+        </div>
+        <ul class="nlinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Visuals</a></li>
+            <li><a href="videos.html">Showreel</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="ncta-w"><a href="contact.html" class="ncta act" style="background:var(--blue-700);">Contact</a></div>
+        <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="drw" id="drw">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Visuals</a>
+    <a href="videos.html">Showreel</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html" class="mcta">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+    <div class="wrap ph-inner">
+        <div class="rev">
+            <div class="eyebrow lt">Get in Touch</div>
+            <div class="rule lt"></div>
+        </div>
+        <h1 class="rev d1">Let's Build<br><em>Something.</em></h1>
+        <p class="rev d2">Ready to initiate organizational transformation? Let's talk about how we can make it happen for your team, your leaders, and your institution.</p>
+    </div>
+</header>
+
+<!-- MAIN CONTACT SECTION -->
+<section class="sec" style="background: var(--white);">
+    <div class="wrap">
+        <div class="contact-layout">
+
+            <!-- LEFT: Info -->
+            <div class="rev">
+                <h2 class="contact-info-title">Let's talk<br><em>Strategy.</em></h2>
+                <p class="contact-intro">Hyderabad, Telangana, India — designated for global corporate transformation. Dr. Krishnan works with organizations across India, UK, US, and EMEA.</p>
+
+                <ul class="cdetail-list">
+                    <li class="cdetail">
+                        <div class="cdetail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="cdetail-body">
+                            <div class="cdetail-label">Location</div>
+                            <div class="cdetail-value">Hyderabad, Telangana, India</div>
+                        </div>
+                    </li>
+                    <li class="cdetail">
+                        <div class="cdetail-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="cdetail-body">
+                            <div class="cdetail-label">Education</div>
+                            <div class="cdetail-value">Indian Institute of Management</div>
+                            <span style="font-size:13px;color:var(--grey-500);">IIM Calcutta</span>
+                        </div>
+                    </li>
+                    <li class="cdetail">
+                        <div class="cdetail-icon"><i class="fab fa-linkedin"></i></div>
+                        <div class="cdetail-body">
+                            <div class="cdetail-label">LinkedIn Community</div>
+                            <div class="cdetail-value">13,000+ Active Followers</div>
+                            <a href="https://www.linkedin.com/in/drkc" target="_blank" class="cdetail-link">linkedin.com/in/drkc <i class="fas fa-external-link-alt" style="font-size:10px;"></i></a>
+                        </div>
+                    </li>
+                    <li class="cdetail">
+                        <div class="cdetail-icon" style="background:#f0fff4;color:var(--green);"><i class="fab fa-whatsapp"></i></div>
+                        <div class="cdetail-body">
+                            <div class="cdetail-label">WhatsApp</div>
+                            <div class="cdetail-value">+91 6300405352</div>
+                            <a href="https://wa.me/916300405352" target="_blank" class="cdetail-link wa">Send Direct Message <i class="fas fa-arrow-right" style="font-size:10px;"></i></a>
+                        </div>
+                    </li>
+                    <li class="cdetail">
+                        <div class="cdetail-icon"><i class="fas fa-building"></i></div>
+                        <div class="cdetail-body">
+                            <div class="cdetail-label">Organization</div>
+                            <div class="cdetail-value">Learning Without Walls</div>
+                            <span style="font-size:13px;color:var(--grey-500);">Leadership Development &amp; Consulting</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="quick-chips">
+                    <a href="https://www.linkedin.com/in/drkc" target="_blank" class="qchip qchip-li">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+                    <a href="https://wa.me/916300405352" target="_blank" class="qchip qchip-wa">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Form -->
+            <div class="rev d1">
+                <div class="form-card">
+                    <div class="form-badge"><i class="fas fa-shield-alt"></i> Professional Enquiries</div>
+                    <h3 class="form-title">Start the <em>Conversation.</em></h3>
+
+                    <form id="contactForm">
+                        <div class="frow">
+                            <div class="fg">
+                                <label>Your Name <span>*</span></label>
+                                <input type="text" class="fi" id="name" placeholder="Full Name" required>
+                            </div>
+                            <div class="fg">
+                                <label>Email Address <span>*</span></label>
+                                <input type="email" class="fi" id="email" placeholder="email@company.com" required>
+                            </div>
+                        </div>
+
+                        <div class="frow">
+                            <div class="fg">
+                                <label>Organization</label>
+                                <input type="text" class="fi" id="org" placeholder="Your Organization">
+                            </div>
+                            <div class="fg">
+                                <label>Phone Number</label>
+                                <input type="tel" class="fi" id="phone" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                        </div>
+
+                        <div class="fg">
+                            <label>Inquiry Type <span>*</span></label>
+                            <select class="fi" id="inquiryType" required>
+                                <option value="">Select an area of interest...</option>
+                                <option value="corporate-training">Corporate Training Programs</option>
+                                <option value="executive-coaching">Executive Coaching</option>
+                                <option value="keynote">Keynote Speaking</option>
+                                <option value="consulting">Leadership Consulting</option>
+                                <option value="campus">Campus / University Workshop</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="fg">
+                            <label>Your Message <span>*</span></label>
+                            <textarea class="fi" id="message" placeholder="Tell us about your organization, team size, and what you're hoping to achieve..." required></textarea>
+                        </div>
+
+                        <div class="form-btns">
+                            <button type="submit" class="btn btn-wa" id="waBtn">
+                                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                            </button>
+                            <button type="button" class="btn btn-blue" id="emailBtn">
+                                <i class="fas fa-envelope"></i> Send Email
+                            </button>
+                        </div>
+
+                        <p class="form-note">
+                            <i class="fas fa-clock"></i>
+                            We respond to all professional enquiries within 24 hours.
+                        </p>
+                    </form>
+
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Message Sent!</h4>
+                        <p>Thank you for reaching out. Dr. Krishnan's team will get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS STRIP (dark) -->
+<div class="process-strip">
+    <div class="wrap">
+        <div style="text-align:center; padding-top:clamp(48px,6vw,72px); margin-bottom:40px;">
+            <div class="eyebrow lt ctr rev" style="display:inline-flex;">How It Works</div>
+            <div class="rule lt ctr rev"></div>
+            <h2 class="hd w rev" style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.4rem);font-weight:700;line-height:1.1;color:var(--white);">From Enquiry to <em style="font-style:italic;color:var(--blue-300);">Transformation.</em></h2>
+        </div>
+        <div class="proc-grid">
+            <div class="proc-item rev">
+                <div class="proc-num">01</div>
+                <h4>Initial Enquiry</h4>
+                <p>Submit your message or reach out via WhatsApp. We'll review your requirements within 24 hours.</p>
+            </div>
+            <div class="proc-item rev d1">
+                <div class="proc-num">02</div>
+                <h4>Discovery Call</h4>
+                <p>A focused 30-minute call to understand your organizational needs, goals, and the scale of the intervention.</p>
+            </div>
+            <div class="proc-item rev d2">
+                <div class="proc-num">03</div>
+                <h4>Custom Proposal</h4>
+                <p>A tailored program design aligned to your culture, industry, and specific leadership challenges.</p>
+            </div>
+            <div class="proc-item rev d3">
+                <div class="proc-num">04</div>
+                <h4>Transformation Begins</h4>
+                <p>Execution of the learning journey — with ongoing support, measurement, and behavioral tracking.</p>
+            </div>
+        </div>
+        <div style="padding-bottom:clamp(48px,6vw,72px);"></div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec" style="background: var(--grey-50);">
+    <div class="wrap">
+        <div style="text-align:center; margin-bottom:52px;">
+            <div class="eyebrow ctr rev" style="display:inline-flex;">What We Offer</div>
+            <div class="rule ctr rev"></div>
+            <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.4rem);font-weight:700;line-height:1.1;color:var(--ink);" class="rev">Our <em style="font-style:italic;color:var(--blue-500);">Core Services.</em></h2>
+        </div>
+        <div class="svc-grid">
+            <div class="svc-card rev">
+                <div class="svc-icon"><i class="fas fa-users-cog"></i></div>
+                <h5>Leadership Development</h5>
+                <p>Transform leaders and teams through behavioral ownership programs that drive measurable change.</p>
+            </div>
+            <div class="svc-card rev d1">
+                <div class="svc-icon"><i class="fas fa-chess-king"></i></div>
+                <h5>Executive Coaching</h5>
+                <p>1-on-1 strategic mentoring for C-suite leaders navigating complex organizational challenges.</p>
+            </div>
+            <div class="svc-card rev d2">
+                <div class="svc-icon"><i class="fas fa-microphone"></i></div>
+                <h5>Keynote Speaking</h5>
+                <p>Inspiring, evidence-backed talks on leadership, human potential, and the future of organizations.</p>
+            </div>
+            <div class="svc-card rev d3">
+                <div class="svc-icon"><i class="fas fa-brain"></i></div>
+                <h5>Organizational Consulting</h5>
+                <p>Design capability-building systems that align learning strategy with business performance outcomes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band sec-sm">
+    <div class="wrap">
+        <div class="cta-inner rev">
+            <h2>Ready to return to the <em>full story?</em></h2>
+            <a href="../index.html" class="btn btn-white" style="flex-shrink:0; width:auto;">Back to Home <i class="fas fa-arrow-right arr"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="wrap">
+        <div class="fgrid">
+            <div>
+                <a href="../index.html" class="fbrand">Dr. Krishnan <em>Chandrasekharan</em></a>
+                <p class="fdesc">Global Leadership Strategist &amp; Executive Mentor. Transforming knowledge into behavioral ownership across 4 continents.</p>
+            </div>
+            <div class="fcol">
+                <h6>Navigation</h6>
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Visuals</a>
+                <a href="videos.html">Showreel</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="fcol">
+                <h6>Connect</h6>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin" style="margin-right:9px;"></i>LinkedIn</a>
+                <a href="https://wa.me/916300405352" target="_blank"><i class="fab fa-whatsapp" style="margin-right:9px;"></i>WhatsApp</a>
+                <a href="contact.html"><i class="fas fa-envelope" style="margin-right:9px;"></i>Email</a>
+            </div>
+        </div>
+        <div class="fbot">
+            <p>&copy; 2026 Dr. Krishnan Chandrasekharan. All rights reserved.</p>
+            <div class="fsoc">
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/916300405352" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="contact.html"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/916300405352" class="wa-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+    // NAV SCROLL
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 48));
+
+    // MOBILE MENU
+    const ham = document.getElementById('ham'), drw = document.getElementById('drw');
+    ham.addEventListener('click', () => { ham.classList.toggle('op'); drw.classList.toggle('op'); });
+    drw.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('op'); drw.classList.remove('op'); }));
+
+    // REVEAL
+    const ro = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+    }), { threshold: 0.1 });
+    document.querySelectorAll('.rev').forEach(el => ro.observe(el));
+
+    // FORM: WhatsApp
+    document.getElementById('waBtn').addEventListener('click', function() {
+        const form = document.getElementById('contactForm');
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        const name    = document.getElementById('name').value;
+        const email   = document.getElementById('email').value;
+        const org     = document.getElementById('org').value;
+        const type    = document.getElementById('inquiryType').value;
+        const message = document.getElementById('message').value;
+        const text = `Hello Dr. Krishnan,\n\n*Name:* ${name}\n*Email:* ${email}\n*Organization:* ${org || 'N/A'}\n*Enquiry Type:* ${type}\n\n*Message:*\n${message}`;
+        window.open(`https://wa.me/916300405352?text=${encodeURIComponent(text)}`, '_blank');
+    });
+
+    // FORM: Email
+    document.getElementById('emailBtn').addEventListener('click', function() {
+        const form = document.getElementById('contactForm');
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        const name    = document.getElementById('name').value;
+        const email   = document.getElementById('email').value;
+        const org     = document.getElementById('org').value;
+        const type    = document.getElementById('inquiryType').value;
+        const message = document.getElementById('message').value;
+        const subject = `Professional Enquiry: ${type} — ${name}`;
+        const body    = `Name: ${name}\nEmail: ${email}\nOrganization: ${org || 'N/A'}\nEnquiry Type: ${type}\n\nMessage:\n${message}`;
+        window.location.href = `mailto:contact@drkc.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+</script>
+</body>
+</html>

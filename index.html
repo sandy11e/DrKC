@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Official Portfolio of Dr. Krishnan Chandrasekharan | Global Leadership Strategist & Executive Mentor impacting 150,000+ professionals.">
+    <title>Dr. Krishnan Chandrasekharan | Global Leadership Transformation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root {
+            --blue-900: #0a1628;
+            --blue-800: #102040;
+            --blue-700: #1a3560;
+            --blue-600: #1e4080;
+            --blue-500: #1d4ed8;
+            --blue-400: #3b82f6;
+            --blue-300: #93c5fd;
+            --blue-200: #bfdbfe;
+            --blue-100: #dbeafe;
+            --blue-50:  #eff6ff;
+            --white:    #ffffff;
+            --grey-50:  #f8fafc;
+            --grey-100: #f1f5f9;
+            --grey-200: #e2e8f0;
+            --grey-300: #cbd5e1;
+            --grey-500: #64748b;
+            --grey-700: #334155;
+            --ink:      #0f172a;
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 36px;
+            --radius-full: 9999px;
+            --shadow-xs:  0 1px 4px rgba(15,23,42,0.06);
+            --shadow-sm:  0 2px 12px rgba(15,23,42,0.08);
+            --shadow-md:  0 8px 32px rgba(15,23,42,0.10);
+            --shadow-lg:  0 20px 60px rgba(15,23,42,0.13);
+            --shadow-xl:  0 32px 80px rgba(15,23,42,0.16);
+            --shadow-blue: 0 12px 40px rgba(29,78,216,0.22);
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --tr: all 0.38s var(--ease);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--white); color: var(--ink); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--grey-100); }
+        ::-webkit-scrollbar-thumb { background: var(--blue-400); border-radius: 10px; }
+        ::selection { background: var(--blue-100); color: var(--blue-800); }
+
+        .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); }
+        .sec { padding: clamp(80px, 10vw, 140px) 0; }
+        .sec-sm { padding: clamp(56px, 7vw, 96px) 0; }
+        .sec-xs { padding: clamp(36px, 5vw, 64px) 0; }
+
+        .eyebrow {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-size: 11px; font-weight: 700; letter-spacing: 0.22em;
+            text-transform: uppercase; color: var(--blue-500);
+        }
+        .eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--blue-500); border-radius: 2px; flex-shrink: 0; }
+        .eyebrow.ctr { justify-content: center; }
+        .eyebrow.ctr::before { display: none; }
+        .eyebrow.ctr::after { content: ''; width: 22px; height: 2px; background: var(--blue-500); border-radius: 2px; flex-shrink: 0; }
+        .eyebrow.light { color: var(--blue-300); }
+        .eyebrow.light::before, .eyebrow.light::after { background: var(--blue-400); }
+
+        .rule { width: 44px; height: 3px; background: var(--blue-500); border-radius: 2px; margin: 18px 0 26px; }
+        .rule.ctr { margin: 18px auto 26px; }
+        .rule.light { background: var(--blue-400); }
+
+        .hd {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 4.6rem);
+            font-weight: 700; line-height: 1.08; letter-spacing: -0.01em; color: var(--ink);
+        }
+        .hd em { font-style: italic; color: var(--blue-500); }
+        .hd.w { color: var(--white); }
+        .hd.w em { color: var(--blue-300); }
+
+        .hs { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.8rem); font-weight: 600; line-height: 1.15; color: var(--ink); }
+        .hs em { font-style: italic; color: var(--blue-500); }
+
+        .body-lg { font-size: clamp(15px, 1.7vw, 17px); line-height: 1.85; color: var(--grey-500); }
+        .body-md { font-size: 15px; line-height: 1.8; color: var(--grey-500); }
+
+        /* BUTTONS */
+        .btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; border: none; border-radius: var(--radius-full); padding: 15px 32px; transition: var(--tr); white-space: nowrap; cursor: pointer; }
+        .btn .arr { transition: transform 0.3s var(--ease); }
+        .btn:hover .arr { transform: translateX(4px); }
+        .btn-blue { background: var(--blue-500); color: var(--white); box-shadow: var(--shadow-blue); }
+        .btn-blue:hover { background: var(--blue-700); color: var(--white); transform: translateY(-2px); box-shadow: 0 18px 52px rgba(29,78,216,0.35); }
+        .btn-white { background: var(--white); color: var(--blue-700); box-shadow: var(--shadow-md); }
+        .btn-white:hover { background: var(--grey-50); color: var(--blue-800); transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: var(--blue-600); border: 2px solid var(--blue-200); padding: 13px 30px; }
+        .btn-outline:hover { background: var(--blue-500); color: var(--white); border-color: var(--blue-500); }
+        .btn-ghost { background: rgba(255,255,255,0.1); color: var(--white); border: 1.5px solid rgba(255,255,255,0.3); padding: 13px 30px; backdrop-filter: blur(8px); }
+        .btn-ghost:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.6); color: var(--white); }
+
+        /* NAV */
+        #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: var(--tr); width: 100%; }
+        .nb {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 clamp(20px,5vw,72px); height: 72px;
+            background: rgba(255,255,255,0.92); backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            border-bottom: 1px solid rgba(29,78,216,0.07); transition: var(--tr);
+        }
+        #nav.sc .nb { height: 64px; box-shadow: var(--shadow-md); border-bottom-color: var(--grey-200); }
+        .nbrand { font-family: var(--font-display); font-size: clamp(13px,1.5vw,16px); font-weight: 700; color: var(--blue-900); text-decoration: none; line-height: 1.2; }
+        .nbrand em { font-style: italic; color: var(--blue-500); font-weight: 400; }
+        .nlinks { display: flex; align-items: center; gap: clamp(16px,2.5vw,36px); list-style: none; }
+        .nlinks a { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-500); text-decoration: none; transition: color 0.25s; position: relative; }
+        .nlinks a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--blue-500); border-radius: 2px; transform: scaleX(0); transition: transform 0.3s var(--ease); }
+        .nlinks a:hover, .nlinks a.act { color: var(--blue-600); }
+        .nlinks a:hover::after, .nlinks a.act::after { transform: scaleX(1); }
+        .ncta { font-size: 12px; font-weight: 700; padding: 10px 22px; border-radius: var(--radius-full); background: var(--blue-500); color: var(--white) !important; text-decoration: none; transition: var(--tr); }
+        .ncta:hover { background: var(--blue-700); transform: translateY(-1px); }
+
+        .ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+        .ham span { display: block; width: 22px; height: 2px; background: var(--blue-800); border-radius: 2px; transition: var(--tr); }
+        .ham.op span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+        .ham.op span:nth-child(2) { opacity: 0; width: 0; }
+        .ham.op span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+        .drw { display: none; position: fixed; top: 72px; left: 0; right: 0; z-index: 999; background: rgba(255,255,255,0.98); backdrop-filter: blur(24px); border-bottom: 1px solid var(--grey-200); flex-direction: column; box-shadow: var(--shadow-lg); transform: translateY(-8px); opacity: 0; transition: var(--tr); pointer-events: none; }
+        .drw.op { display: flex; transform: translateY(0); opacity: 1; pointer-events: all; }
+        .drw a { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-700); text-decoration: none; padding: 18px clamp(20px,5vw,72px); border-bottom: 1px solid var(--grey-100); transition: all 0.2s; }
+        .drw a:hover { color: var(--blue-600); background: var(--blue-50); }
+        .drw .mcta { background: var(--blue-500); color: var(--white) !important; text-align: center; margin: 16px clamp(20px,5vw,72px) 24px; border-radius: var(--radius-full); border-bottom: none !important; }
+        .drw .mcta:hover { background: var(--blue-700); }
+        .nav-pic { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--blue-200); margin-right: 12px; display: block; flex-shrink: 0; }
+        .nbrand-wrap { display: flex; align-items: center; gap: 0; }
+
+        @media(max-width:860px) { .nlinks, .ncta-w { display: none; } .ham { display: flex; } }
+
+        /* HERO */
+        #hero { min-height: 100svh; position: relative; overflow: hidden; background: var(--blue-900); display: flex; align-items: stretch; }
+        .hbg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 85% 75% at 65% 40%, rgba(29,78,216,0.38) 0%, transparent 65%), radial-gradient(ellipse 50% 65% at 8% 75%, rgba(16,32,64,0.7) 0%, transparent 60%), linear-gradient(155deg, #0a1628 0%, #102040 45%, #0c1d3a 100%); }
+        .hdots { position: absolute; inset: 0; z-index: 0; opacity: 0.07; background-image: radial-gradient(circle, rgba(147,197,253,1) 1px, transparent 1px); background-size: 44px 44px; }
+        .hshape { position: absolute; right: -60px; top: 0; bottom: 0; width: 52%; background: rgba(255,255,255,0.022); clip-path: polygon(14% 0%,100% 0%,100% 100%,0% 100%); z-index: 0; }
+
+        .hi { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; max-width: 1240px; margin: 0 auto; padding: 120px clamp(20px,5vw,72px) 80px; width: 100%; }
+        .hbadge { display: inline-flex; align-items: center; gap: 10px; background: rgba(59,130,246,0.16); border: 1px solid rgba(147,197,253,0.28); border-radius: var(--radius-full); padding: 7px 18px; margin-bottom: 26px; }
+        .hbadge span { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue-300); }
+        .hbadge i { font-size: 9px; color: var(--blue-300); }
+        .htitle { font-family: var(--font-display); font-size: clamp(2.8rem, 6vw, 6rem); font-weight: 700; line-height: 1.0; color: var(--white); letter-spacing: -0.015em; margin-bottom: 22px; }
+        .htitle em { font-style: italic; color: var(--blue-300); }
+        .hsub { font-size: clamp(15px,1.7vw,17px); line-height: 1.85; color: rgba(255,255,255,0.52); margin-bottom: 44px; max-width: 500px; }
+        .hacts { display: flex; gap: 14px; flex-wrap: wrap; }
+        .hpcol { display: flex; justify-content: center; align-items: flex-end; }
+        .hcwrap { position: relative; width: clamp(240px,36vw,430px); }
+        .hglow { position: absolute; inset: -24px; background: radial-gradient(ellipse at center, rgba(59,130,246,0.22) 0%, transparent 70%); border-radius: var(--radius-xl); pointer-events: none; }
+        .hcard { position: relative; background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-xl); padding: 12px; box-shadow: 0 32px 80px rgba(0,0,0,0.4); }
+        .himg { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: calc(var(--radius-xl) - 8px); display: block; filter: saturate(0.9) contrast(1.05); }
+        .schip { position: absolute; z-index: 3; display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.97); border-radius: var(--radius-full); padding: 10px 18px; box-shadow: var(--shadow-lg); border: 1px solid var(--grey-200); }
+        .schip .cn { font-family: var(--font-display); font-size: 1.45rem; font-weight: 700; color: var(--blue-600); line-height: 1; }
+        .schip .ct { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-500); line-height: 1.4; }
+        .ctl { top: 20px; left: -18px; }
+        .cbr { bottom: 48px; right: -18px; }
+        .hscroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+        .hscroll span { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+        .sbar { width: 1.5px; height: 42px; background: linear-gradient(to bottom, rgba(147,197,253,0.8), transparent); animation: sdrop 2.2s ease-in-out infinite; }
+        @keyframes sdrop { 0%,100%{opacity:0.3;transform:scaleY(0.8)} 50%{opacity:1;transform:scaleY(1)} }
+
+        @media(max-width:860px) { .hi { grid-template-columns: 1fr; padding-top: 96px; gap: 36px; } .hpcol { order: -1; display: none; } .hcwrap { width: clamp(190px,52vw,290px); margin: 0 auto; } .hsub { max-width: 100%; } .ctl { top: -45px; left: 50%; transform: translateX(-50%); z-index: 2; } .cbr { bottom: -45px; right: 50%; transform: translateX(50%); z-index: 2; } }
+        @media(max-width:480px) { .schip { padding: 7px 12px; z-index: 2; } .schip .cn { font-size: 1.1rem; } }
+
+        /* TICKER */
+        .tick { background: var(--blue-600); padding: 15px 0; overflow: hidden; }
+        .tt { display: flex; white-space: nowrap; animation: mq 28s linear infinite; }
+        .tt:hover { animation-play-state: paused; }
+        .ti { display: inline-flex; align-items: center; gap: 18px; padding: 0 26px; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.88); }
+        .td { width: 4px; height: 4px; background: rgba(255,255,255,0.35); border-radius: 50%; flex-shrink: 0; }
+        @keyframes mq { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+        /* PROBLEM */
+        .pline { font-family: var(--font-display); font-size: clamp(2.4rem,5.5vw,4.8rem); font-weight: 700; line-height: 1.1; color: var(--ink); opacity: 0.1; transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); transform: translateX(-14px); padding: 8px 0; }
+        .pline.lit { opacity: 1; transform: translateX(0); }
+        .pline em { color: var(--blue-500); font-style: italic; }
+        .pnote { margin-top: 52px; padding-left: 26px; border-left: 3px solid var(--blue-500); max-width: 520px; }
+
+        /* METRICS */
+        .mstrip { background: var(--blue-700); }
+        .mgrid { display: grid; grid-template-columns: repeat(4,1fr); }
+        .mcell { padding: clamp(28px,4vw,52px) clamp(16px,3vw,36px); text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+        .mcell:last-child { border-right: none; }
+        .mnum { display: block; font-family: var(--font-display); font-size: clamp(2.4rem,4.5vw,4rem); font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 8px; }
+        .mlbl { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
+        @media(max-width:640px) { .mgrid{grid-template-columns:1fr 1fr;} .mcell:nth-child(2){border-right:none;} .mcell:nth-child(1),.mcell:nth-child(2){border-bottom:1px solid rgba(255,255,255,0.08);} }
+
+        /* TWO COL */
+        .tcol { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,96px); align-items: center; }
+        .tcol.fl { direction: rtl; }
+        .tcol.fl > * { direction: ltr; }
+        @media(max-width:820px) { .tcol,.tcol.fl { grid-template-columns: 1fr; direction: ltr; } }
+
+        /* IMG FRAME */
+        .ifr { position: relative; }
+        .ifr img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); display: block; }
+        .ifr::before { content: ''; position: absolute; inset: -14px; border-radius: calc(var(--radius-lg)+6px); border: 1.5px solid var(--blue-200); z-index: -1; }
+        .icap { position: absolute; bottom: -20px; left: 24px; right: 24px; background: var(--white); border-radius: var(--radius-md); padding: 18px 22px; box-shadow: var(--shadow-lg); border-left: 4px solid var(--blue-500); }
+        .icap p { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: var(--ink); line-height: 1.5; margin: 0; }
+
+        /* DIST CARDS */
+        .dgrid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+        @media(max-width:600px) { .dgrid { grid-template-columns: 1fr; } }
+        .dcard { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius-lg); padding: clamp(22px,3vw,36px); transition: var(--tr); position: relative; overflow: hidden; }
+        .dcard::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg,var(--blue-500),var(--blue-300)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s var(--ease); }
+        .dcard:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--blue-200); }
+        .dcard:hover::after { transform: scaleX(1); }
+        .dicon { width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--blue-50); display: flex; align-items: center; justify-content: center; color: var(--blue-500); font-size: 1.1rem; margin-bottom: 18px; transition: var(--tr); }
+        .dcard:hover .dicon { background: var(--blue-500); color: var(--white); }
+        .dcard h4 { font-family: var(--font-display); font-size: 1.18rem; font-weight: 600; margin-bottom: 10px; }
+        .dcard p { font-size: 14px; line-height: 1.78; color: var(--grey-500); }
+
+        /* LWW DARK */
+        .lww { background: var(--blue-900); position: relative; overflow: hidden; }
+        .lww::before { content: 'LWW'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-family: var(--font-display); font-size: 20vw; font-weight: 700; color: rgba(59,130,246,0.04); line-height: 1; pointer-events: none; user-select: none; }
+        .lwl { list-style: none; margin-top: 26px; }
+        .lwl li { display: flex; align-items: flex-start; gap: 14px; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 15px; color: rgba(255,255,255,0.58); }
+        .lwl li:last-child { border-bottom: none; }
+        .lwl li i { color: var(--blue-400); flex-shrink: 0; margin-top: 2px; }
+        .lwimg { border-radius: var(--radius-lg); overflow: hidden; position: relative; }
+        .lwimg img { width: 100%; display: block; }
+        .lwimg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,22,40,0.55), transparent 55%); }
+
+        /* CASE STUDIES */
+        .clist { display: flex; flex-direction: column; gap: 28px; }
+        .citem { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius-lg); padding: 28px 32px; transition: var(--tr); display: grid; grid-template-columns: 240px 1fr 260px; gap: 32px; align-items: center; }
+        .citem:hover { box-shadow: var(--shadow-lg); border-color: var(--blue-200); }
+        .chead-v2 { border-right: 2px solid var(--grey-100); padding-right: 32px; }
+        .chead-v2 h4 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+        .chead-v2 p { font-size: 12px; color: var(--grey-500); line-height: 1.5; }
+        .cmetrics { display: flex; align-items: center; justify-content: center; gap: 20px; }
+        .cm { text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .cm-label { font-size: 11px; color: var(--grey-500); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; min-height: 12px; }
+        .cm-value { font-size: 1.4rem; font-weight: 700; color: var(--ink); font-family: var(--font-display); line-height: 1; margin-bottom: 4px; }
+        .cm-value.hi { color: var(--blue-500); }
+        .cm > div:last-child { font-size: 11px; color: var(--grey-500); line-height: 1.3; }
+        .carrow { font-size: 1.8rem; color: var(--blue-400); flex-shrink: 0; }
+        .cresult { text-align: center; background: linear-gradient(135deg, var(--blue-50) 0%, rgba(59,130,246,0.08) 100%); border-radius: var(--radius-md); border: 1px solid var(--blue-100); padding: 18px; }
+        .cresult-num { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--blue-600); line-height: 1; margin-bottom: 6px; }
+        .cresult-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-600); }
+        .cresult-detail { font-size: 12px; color: var(--grey-500); margin-top: 10px; line-height: 1.5; }
+        @media(max-width:1200px) { .citem { grid-template-columns: 1fr; gap: 20px; } .chead-v2 { border-right: none; border-bottom: 2px solid var(--grey-100); padding-right: 0; padding-bottom: 20px; } .cmetrics { justify-content: center; } }
+        @media(max-width:640px) { .citem { padding: 18px 20px; } .citem { grid-template-columns: 1fr; } .cmetrics { flex-wrap: wrap; } .carrow { font-size: 1.4rem; } }
+
+        /* TESTIMONIALS */
+        .tgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+        @media(max-width:900px) { .tgrid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } }
+        .tcard { background: var(--white); border-radius: var(--radius-lg); padding: clamp(22px,3vw,36px); border: 1px solid var(--grey-100); box-shadow: var(--shadow-xs); transition: var(--tr); display: flex; flex-direction: column; }
+        .tcard:hover { box-shadow: var(--shadow-lg); border-color: var(--blue-100); transform: translateY(-4px); }
+        .tstars { display: flex; gap: 4px; margin-bottom: 18px; }
+        .tstars i { color: var(--blue-400); font-size: 12px; }
+        .ttext { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; line-height: 1.8; color: var(--ink); flex: 1; margin-bottom: 22px; }
+        .tau { display: flex; align-items: center; gap: 12px; }
+        .tav { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 2px solid var(--blue-100); }
+        .tname { font-weight: 700; font-size: 13px; color: var(--ink); }
+        .trole { font-size: 12px; color: var(--grey-500); }
+        .tcta { background: linear-gradient(135deg, var(--blue-600), var(--blue-800)); border-radius: var(--radius-lg); padding: clamp(28px,3vw,44px); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 14px; }
+        .tcta i { font-size: 2rem; color: rgba(255,255,255,0.3); }
+        .tcta h5 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--white); }
+        .tcta p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+        /* SERVICES */
+        .sgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+        @media(max-width:680px) { .sgrid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; } }
+        .scard { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius-lg); padding: clamp(28px,3.5vw,44px); text-align: center; transition: var(--tr); cursor: default; }
+        .scard:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); border-color: var(--blue-200); }
+        .sicon { width: 66px; height: 66px; border-radius: 50%; background: var(--blue-50); display: flex; align-items: center; justify-content: center; color: var(--blue-500); font-size: 1.4rem; margin: 0 auto 20px; transition: var(--tr); }
+        .scard:hover .sicon { background: var(--blue-500); color: var(--white); box-shadow: var(--shadow-blue); }
+        .scard h4 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--ink); }
+
+        /* BLOG */
+        .bgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+        @media(max-width:680px) { .bgrid { grid-template-columns: 1fr; } }
+        .bcard { background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius-lg); padding: clamp(22px,3vw,32px); transition: var(--tr); }
+        .bcard:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: var(--blue-200); }
+        .btag { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue-500); }
+        .bcard h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin: 10px 0; line-height: 1.4; }
+        .bcard p { font-size: 13px; color: var(--grey-500); line-height: 1.75; }
+        .blink { margin-top: 18px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue-500); text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: gap 0.25s; }
+        .blink:hover { gap: 12px; color: var(--blue-600); }
+
+        /* MOSAIC */
+        .mos { display: grid; grid-template-columns: 3fr 2fr; grid-template-rows: 1fr 1fr; gap: 14px; height: 420px; }
+        .mm { grid-row: 1/3; border-radius: var(--radius-lg); overflow: hidden; }
+        .ms { border-radius: var(--radius-md); overflow: hidden; }
+        .mm img, .ms img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
+        .mm:hover img, .ms:hover img { transform: scale(1.04); }
+        @media(max-width:640px) { .mos { grid-template-columns: 1fr; height: auto; } .mm { grid-row: auto; height: 220px; } .ms { height: 160px; } }
+
+        /* VIDEO */
+        .vwrap { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 14px; }
+        .vthumb { position: relative; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16/9; cursor: pointer; }
+        .vthumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s var(--ease); }
+        .vthumb:hover img { transform: scale(1.03); }
+        .vov { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(10,22,40,0.35); transition: background 0.3s; }
+        .vthumb:hover .vov { background: rgba(10,22,40,0.15); }
+        .pbtn { width: 64px; height: 64px; border-radius: 50%; background: var(--blue-500); color: var(--white); font-size: 1.1rem; display: flex; align-items: center; justify-content: center; padding-left: 4px; box-shadow: 0 8px 32px rgba(29,78,216,0.5); transition: transform 0.3s, box-shadow 0.3s; }
+        .vthumb:hover .pbtn { transform: scale(1.12); box-shadow: 0 14px 48px rgba(29,78,216,0.65); }
+
+        /* CTA STRIP */
+        .cstrip { background: var(--blue-600); }
+        .cin { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+        .cin h2 { font-family: var(--font-display); font-size: clamp(1.4rem,3vw,2.3rem); font-weight: 600; color: var(--white); max-width: 560px; line-height: 1.25; }
+        .cin h2 em { font-style: italic; color: var(--blue-200); }
+
+        /* FOOTER */
+        footer { background: var(--blue-900); color: rgba(255,255,255,0.5); padding: clamp(48px,6vw,80px) 0 28px; }
+        .fgrid { display: grid; grid-template-columns: 1.8fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        @media(max-width:700px) { .fgrid { grid-template-columns: 1fr; gap: 28px; } }
+        .fbrand { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--white); text-decoration: none; display: block; margin-bottom: 12px; }
+        .fbrand em { font-style: italic; color: var(--blue-300); }
+        .fdesc { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.36); }
+        .fcol h6 { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+        .fcol a { display: block; font-size: 13px; color: rgba(255,255,255,0.38); text-decoration: none; margin-bottom: 10px; transition: color 0.25s; }
+        .fcol a:hover { color: var(--blue-300); }
+        .fbot { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 12px; }
+        .fbot p { font-size: 12px; }
+        .fsoc { display: flex; gap: 12px; }
+        .fsoc a { width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.38); font-size: 13px; text-decoration: none; transition: var(--tr); }
+        .fsoc a:hover { background: var(--blue-500); border-color: var(--blue-500); color: var(--white); transform: translateY(-2px); }
+
+        /* WA FLOAT */
+        .wa { position: fixed; bottom: 28px; right: 28px; z-index: 999; width: 52px; height: 52px; border-radius: 50%; background: #25D366; color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; text-decoration: none; box-shadow: 0 8px 32px rgba(37,211,102,0.4); transition: var(--tr); }
+        .wa:hover { transform: scale(1.1); background: #1da851; color: var(--white); }
+
+        /* MODAL */
+        .modal-content { border: none; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); }
+        .modal-header { padding: 28px 32px 10px; border: none; }
+        .modal-body { padding: 0 32px 32px; }
+        .flb { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey-500); margin-bottom: 7px; display: block; }
+        .fc { border: 1.5px solid var(--grey-200); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 14px; font-family: var(--font-body); color: var(--ink); background: var(--white); transition: border-color 0.25s; width: 100%; }
+        .fc:focus { border-color: var(--blue-400); box-shadow: 0 0 0 3px var(--blue-50); outline: none; }
+
+        /* REVEAL */
+        .rev { opacity: 0; transform: translateY(26px); transition: opacity 0.65s var(--ease), transform 0.65s var(--ease); }
+        .rev.in { opacity: 1; transform: translateY(0); }
+        .d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; } .d3 { transition-delay: 0.3s; }
+
+        /* BG helpers */
+        .bg-w { background: var(--white); }
+        .bg-g { background: var(--grey-50); }
+        .bg-b50 { background: var(--blue-50); }
+        .bg-b900 { background: var(--blue-900); }
+        .bg-b800 { background: var(--blue-800); }
+        .bg-b700 { background: var(--blue-700); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+    <div class="nb">
+        <div class="nbrand-wrap">
+            <img src="images/profile.jpg" onerror="this.src='https://images.unsplash.com/photo-1560250056-07ba644d8ad3?auto=format&fit=crop&q=80&w=800'" class="nav-pic" alt="Dr. Krishnan">
+            <a href="index.html" class="nbrand">Dr. Krishnan <em>Chandrasekharan</em></a>
+        </div>
+        <ul class="nlinks">
+            <li><a href="index.html" class="act">Home</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/gallery.html">Visuals</a></li>
+            <li><a href="pages/videos.html">Showreel</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
+        </ul>
+        <div class="ncta-w">
+            <a href="pages/contact.html" class="ncta">Contact</a>
+        </div>
+        <button class="ham" id="ham" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="drw" id="drw">
+    <a href="index.html">Home</a>
+    <a href="pages/about.html">About</a>
+    <a href="pages/gallery.html">Visuals</a>
+    <a href="pages/videos.html">Showreel</a>
+    <a href="pages/blog.html">Blog</a>
+    <a href="pages/contact.html" class="mcta">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+    <div class="hbg"></div>
+    <div class="hdots"></div>
+    <div class="hshape"></div>
+    <div class="hi">
+        <div>
+            <div class="hbadge"><i class="fas fa-globe"></i><span>Global Leadership Strategist</span></div>
+            <h1 class="htitle">Learning was<br>never meant<br>to be <em>confined.</em></h1>
+            <p class="hsub">Dr. Krishnan Chandrasekharan reimagines leadership beyond classrooms — turning theoretical knowledge into measurable behavioral ownership across 4 continents.</p>
+            <div class="hacts">
+                <a href="pages/about.html" class="btn btn-white">Meet Dr. Krishnan <i class="fas fa-arrow-right arr"></i></a>
+                <a href="pages/contact.html" class="btn btn-ghost">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hpcol">
+            <div class="hcwrap">
+                <div class="hglow"></div>
+                <div class="hcard">
+                    <img src="images/profile.jpg" onerror="this.src='https://images.unsplash.com/photo-1560250056-07ba644d8ad3?auto=format&fit=crop&q=80&w=800'" class="himg" alt="Dr. Krishnan Chandrasekharan">
+                    <div class="schip ctl"><span class="cn">25+</span><span class="ct">Years<br>Experience</span></div>
+                    <div class="schip cbr"><span class="cn">150k+</span><span class="ct">Professionals<br>Empowered</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hscroll"><span>Scroll</span><div class="sbar"></div></div>
+</section>
+
+<!-- TICKER -->
+<div class="tick">
+    <div class="tt">
+        <span class="ti">Behavioral Ownership <span class="td"></span></span>
+        <span class="ti">Executive Transformation <span class="td"></span></span>
+        <span class="ti">Learning Without Walls <span class="td"></span></span>
+        <span class="ti">Global Leadership <span class="td"></span></span>
+        <span class="ti">Communication Mastery <span class="td"></span></span>
+        <span class="ti">AI-Enhanced Learning <span class="td"></span></span>
+        <span class="ti">Mindset Evolution <span class="td"></span></span>
+        <span class="ti">Behavioral Ownership <span class="td"></span></span>
+        <span class="ti">Executive Transformation <span class="td"></span></span>
+        <span class="ti">Learning Without Walls <span class="td"></span></span>
+        <span class="ti">Global Leadership <span class="td"></span></span>
+        <span class="ti">Communication Mastery <span class="td"></span></span>
+        <span class="ti">AI-Enhanced Learning <span class="td"></span></span>
+        <span class="ti">Mindset Evolution <span class="td"></span></span>
+    </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="sec bg-w">
+    <div class="wrap">
+        <div class="rev"><div class="eyebrow">The Narrative</div><div class="rule" style="margin-top:14px;"></div></div>
+        <div class="pline" id="pl1">Training happens.</div>
+        <div class="pline" id="pl2">People attend.</div>
+        <div class="pline" id="pl3">Nothing <em>changes.</em></div>
+        <div class="pnote rev">
+            <p class="body-lg">The gap between attendance and transformation is where most leadership development fails. We close that gap — with precision, evidence, and irreversible behavioral shift.</p>
+        </div>
+    </div>
+</section>
+
+<!-- METRICS -->
+<div class="mstrip">
+    <div class="wrap"><div class="mgrid">
+        <div class="mcell rev"><span class="mnum">25+</span><span class="mlbl">Years Experience</span></div>
+        <div class="mcell rev d1"><span class="mnum">150k+</span><span class="mlbl">Professionals Transformed</span></div>
+        <div class="mcell rev d2"><span class="mnum">4</span><span class="mlbl">Continents Covered</span></div>
+        <div class="mcell rev d3"><span class="mnum">13k+</span><span class="mlbl">LinkedIn Community</span></div>
+    </div></div>
+</div>
+
+<!-- BEHAVIORAL OWNERSHIP -->
+<section class="sec bg-g">
+    <div class="wrap"><div class="tcol">
+        <div class="ifr rev">
+            <img src="images/profile.jpg" onerror="this.src='https://images.unsplash.com/photo-1560250056-07ba644d8ad3?auto=format&fit=crop&q=80&w=800'" alt="Dr. Krishnan" style="aspect-ratio:4/5;object-fit:cover;">
+            <div class="icap"><p>"We don't train people. We evolve them."</p></div>
+        </div>
+        <div class="rev d1" style="padding-bottom:36px;">
+            <div class="eyebrow">The Evolution</div><div class="rule"></div>
+            <h2 class="hd">Behavioral<br><em>Ownership.</em></h2>
+            <p class="body-lg" style="margin-top:22px;">Most leadership programs focus on information. We focus on <strong>Actional Outcomes</strong>. We transform knowledge into executive habit — sustainable, measurable, and irreversible.</p>
+            <a href="pages/about.html" class="btn btn-blue" style="margin-top:34px;">Discover the Philosophy <i class="fas fa-arrow-right arr"></i></a>
+        </div>
+    </div></div>
+</section>
+
+<!-- DISTINCTION -->
+<section class="sec bg-w">
+    <div class="wrap">
+        <div style="text-align:center;margin-bottom:52px;">
+            <div class="eyebrow ctr rev">The Distinction</div>
+            <div class="rule ctr rev" style="margin-top:14px;"></div>
+            <h2 class="hd rev" style="margin-top:6px;">Why We're <em>Different.</em></h2>
+        </div>
+        <div class="dgrid">
+            <div class="dcard rev"><div class="dicon"><i class="fas fa-brain"></i></div><h4>Behavioral Ownership Model</h4><p>We transform knowledge into executive habits. Not just training — measurable behavioral change that outlasts every session.</p></div>
+            <div class="dcard rev d1"><div class="dicon"><i class="fas fa-globe-asia"></i></div><h4>Global Cross-Cultural Expertise</h4><p>Deep insights spanning India, UK, US, and EMEA. Leadership that transcends every geographic and cultural boundary.</p></div>
+            <div class="dcard rev"><div class="dicon"><i class="fas fa-robot"></i></div><h4>AI-Enhanced Learning Architecture</h4><p>Leveraging artificial intelligence to diagnose skill gaps and personalize development journeys at organizational scale.</p></div>
+            <div class="dcard rev d1"><div class="dicon"><i class="fas fa-hands-helping"></i></div><h4>Interactive Experiential Learning</h4><p>Real-world simulations, public speaking labs, and reflective coaching that forces sustainable growth.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- LWW DARK -->
+<section class="sec lww">
+    <div class="wrap" style="position:relative;z-index:1;">
+        <div class="tcol">
+            <div class="rev">
+                <div class="eyebrow light">The Initiative</div>
+                <div class="rule light"></div>
+                <h2 class="hd w">Learning<br><em>Without Walls.</em></h2>
+                <p style="font-size:15px;line-height:1.85;color:rgba(255,255,255,0.5);margin-top:18px;">A transformative initiative reimagining how organizations build leadership capability — practical, experiential, and directly connected to real-world outcomes.</p>
+                <ul class="lwl">
+                    <li><i class="fas fa-check-circle"></i><span>Campus-to-Corporate Programs</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Executive Coaching Engagements</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Organizational Capability Building</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Trainer Development Initiatives</span></li>
+                </ul>
+            </div>
+            <div class="lwimg rev d1"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Learning Without Walls"></div>
+        </div>
+    </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="sec bg-g">
+    <div class="wrap">
+        <div style="text-align:center;margin-bottom:52px;">
+            <div class="eyebrow ctr rev">Documented Impact</div>
+            <div class="rule ctr rev" style="margin-top:14px;"></div>
+            <h2 class="hd rev">Case Studies &<br><em>Transformation Metrics.</em></h2>
+        </div>
+        <div class="clist">
+            <div class="citem rev">
+                <div class="chead-v2">
+                    <h4>Leadership Pipeline</h4>
+                    <p>Fortune 500 Tech Company</p>
+                </div>
+                <div class="cmetrics">
+                    <div class="cm">
+                        <div class="cm-label">Before</div>
+                        <div class="cm-value">35%</div>
+                        <div style="font-size:11px;color:var(--grey-500);margin-top:4px;">readiness</div>
+                    </div>
+                    <div class="carrow">→</div>
+                    <div class="cm">
+                        <div class="cm-label">After</div>
+                        <div class="cm-value hi">82%</div>
+                        <div style="font-size:11px;color:var(--grey-500);margin-top:4px;">readiness</div>
+                    </div>
+                </div>
+                <div class="cresult">
+                    <div class="cresult-num">+2.3X</div>
+                    <div class="cresult-label">Improvement Rate</div>
+                    <div class="cresult-detail">6-month intervention across 120+ senior managers</div>
+                </div>
+            </div>
+
+            <div class="citem rev d1">
+                <div class="chead-v2">
+                    <h4>Communication Transformation</h4>
+                    <p>Global Financial Services Firm</p>
+                </div>
+                <div class="cmetrics">
+                    <div class="cm">
+                        <div class="cm-label">Before</div>
+                        <div class="cm-value">28</div>
+                        <div style="font-size:11px;color:var(--grey-500);margin-top:4px;">pts EQ</div>
+                    </div>
+                    <div class="carrow">→</div>
+                    <div class="cm">
+                        <div class="cm-label">After</div>
+                        <div class="cm-value hi">73</div>
+                        <div style="font-size:11px;color:var(--grey-500);margin-top:4px;">pts EQ</div>
+                    </div>
+                </div>
+                <div class="cresult">
+                    <div class="cresult-num">+160%</div>
+                    <div class="cresult-label">Emotional Intelligence Lift</div>
+                    <div class="cresult-detail">Interactive workshops across 250+ professionals</div>
+                </div>
+            </div>
+
+            <div class="citem rev d2">
+                <div class="chead-v2">
+                    <h4>Campus to Corporate</h4>
+                    <p>Top-Tier Engineering Institute</p>
+                </div>
+                <div class="cmetrics">
+                    <div class="cm">
+                        <div class="cm-label">Before</div>
+                        <div class="cm-value">42%</div>
+                        <div style="font-size:11px;color:var(--grey-500);margin-top:4px;">placement</div>
+                    </div>
+                    <div class="carrow">→</div>
+                    <div class="cm">
+                        <div class="cm-label">After</div>
+                        <div class="cm-value hi">89%</div>
+                        <div style="font-size:11px;color:var(--grey-500);margin-top:4px;">placement</div>
+                    </div>
+                </div>
+                <div class="cresult">
+                    <div class="cresult-num">+3X</div>
+                    <div class="cresult-label">Productivity Increase</div>
+                    <div class="cresult-detail">Soft skills & behavioral ownership program</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec bg-w" id="testimonials">
+    <div class="wrap">
+        <div style="text-align:center;margin-bottom:52px;">
+            <div class="eyebrow ctr rev">Voices of Transformation</div>
+            <div class="rule ctr rev" style="margin-top:14px;"></div>
+            <h2 class="hd rev">What Leaders <em>Say.</em></h2>
+            <p class="body-md rev" style="max-width:420px;margin:14px auto 0;">Join 150k+ professionals sharing their transformation stories</p>
+        </div>
+        <div class="tgrid">
+            <div class="tcard rev">
+                <div class="tstars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="ttext">"Dr. Krishnan's approach turned our sales team from transactional to transformational. The behavioral ownership model is a game-changer."</p>
+                <div class="tau"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" class="tav" alt="Rajesh"><div><div class="tname">Rajesh Kumar</div><div class="trole">VP Sales, Tech Corp</div></div></div>
+            </div>
+            <div class="tcard rev d1">
+                <div class="tstars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="ttext">"Beyond any training I've experienced. Dr. Krishnan combines rigorous frameworks with genuine empathy for human growth."</p>
+                <div class="tau"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" class="tav" alt="Priya"><div><div class="tname">Priya Mehta</div><div class="trole">HR Head, Innovation Labs</div></div></div>
+            </div>
+            <div class="tcta rev d2">
+                <i class="fas fa-quote-left"></i>
+                <h5>Share Your Experience</h5>
+                <p>Have you experienced transformation with us? We'd love to hear your story.</p>
+                <button class="btn btn-white" style="font-size:12px;padding:12px 24px;" data-bs-toggle="modal" data-bs-target="#reviewModal">Submit Review <i class="fas fa-arrow-right arr"></i></button>
+            </div>
+        </div>
+        <p style="text-align:center;font-size:12px;color:var(--grey-500);margin-top:24px;">✓ All reviews verified from real clients and professionals</p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="sec bg-b50">
+    <div class="wrap">
+        <div style="text-align:center;margin-bottom:52px;">
+            <div class="eyebrow ctr rev">Core Capabilities</div>
+            <div class="rule ctr rev" style="margin-top:14px;"></div>
+            <h2 class="hd rev">What We <em>Do Best.</em></h2>
+        </div>
+        <div class="sgrid">
+            <div class="scard rev"><div class="sicon"><i class="fas fa-users-cog"></i></div><h4>Leadership Transformation</h4></div>
+            <div class="scard rev d1"><div class="sicon"><i class="fas fa-microphone-alt"></i></div><h4>Communication Mastery</h4></div>
+            <div class="scard rev d2"><div class="sicon"><i class="fas fa-chess"></i></div><h4>Executive Coaching</h4></div>
+        </div>
+    </div>
+</section>
+
+<!-- VISION DARK -->
+<section class="sec bg-b900">
+    <div class="wrap"><div class="tcol">
+        <div class="rev" style="border-radius:var(--radius-lg);overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Future" style="width:100%;display:block;border-radius:var(--radius-lg);">
+        </div>
+        <div class="rev d1">
+            <div class="eyebrow light">The Horizon</div><div class="rule light"></div>
+            <h2 class="hd w">The Future of<br><em>Human Leadership.</em></h2>
+            <p style="font-size:15px;line-height:1.85;color:rgba(255,255,255,0.5);margin-top:18px;">AI will enhance learning diagnostics. Technology will personalize development. But human mentorship and ethical leadership will always be irreplaceable. The future belongs to leaders who master both innovation and empathy.</p>
+            <a href="pages/blog.html" class="btn btn-white" style="margin-top:34px;">Read Insights &amp; Research <i class="fas fa-arrow-right arr"></i></a>
+        </div>
+    </div></div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="sec bg-g">
+    <div class="wrap"><div class="tcol">
+        <div class="rev">
+            <div class="eyebrow">The Person</div><div class="rule"></div>
+            <h2 class="hd">Beyond the <em>Classroom.</em></h2>
+            <p class="body-lg" style="margin-top:22px;">Dr. Krishnan Chandrasekharan is a global thought leader who has spent 25+ years decoding the mechanics of human potential and mindset evolution.</p>
+            <a href="pages/about.html" class="btn btn-blue" style="margin-top:34px;">Know More <i class="fas fa-arrow-right arr"></i></a>
+        </div>
+        <div class="rev d1">
+            <div class="mos">
+                <div class="mm"><img src="images/gallery-preview.png" onerror="this.src='https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=600'" alt="Keynote"></div>
+                <div style="display:flex;flex-direction:column;gap:14px;">
+                    <div class="ms"><img src="https://images.unsplash.com/photo-1560250056-07ba644d8ad3?auto=format&fit=crop&q=80&w=400" alt="Session"></div>
+                    <div class="ms"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400" alt="Workshop"></div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+</section>
+
+<!-- SHOWREEL DARK -->
+<section class="sec bg-b800">
+    <div class="wrap"><div class="tcol fl">
+        <div class="rev d1">
+            <div class="eyebrow light">The Showreel</div><div class="rule light"></div>
+            <h2 class="hd w">Capturing the<br><em>Evolving Mindset.</em></h2>
+            <p style="font-size:15px;line-height:1.85;color:rgba(255,255,255,0.5);margin-top:18px;">Experience the energy of leadership masterclasses and keynotes that redefined organizational ownership across the world's leading boardrooms.</p>
+            <a href="pages/videos.html" class="btn btn-white" style="margin-top:34px;">Watch Full Showreel <i class="fas fa-play arr"></i></a>
+        </div>
+        <div class="rev">
+            <div class="vwrap"><div class="vthumb"><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800" alt="Showreel"><div class="vov"><div class="pbtn"><i class="fas fa-play"></i></div></div></div></div>
+        </div>
+    </div></div>
+</section>
+
+<!-- BLOG -->
+<section class="sec bg-w">
+    <div class="wrap">
+        <div style="text-align:center;margin-bottom:52px;">
+            <div class="eyebrow ctr rev">Thought Leadership</div>
+            <div class="rule ctr rev" style="margin-top:14px;"></div>
+            <h2 class="hd rev">Explore <em>Insights.</em></h2>
+        </div>
+        <div class="bgrid">
+            <div class="bcard rev"><div class="btag">Leadership</div><h4>The Evolution of Human Capital</h4><p>Exploring why behavioral ownership is the single most important metric in organizational development today.</p><a href="pages/blog.html" class="blink">Read Article <i class="fas fa-arrow-right"></i></a></div>
+            <div class="bcard rev d1"><div class="btag">Mindset</div><h4>Leadership Without Walls</h4><p>Reimagining human capability beyond traditional classroom constraints and into the field of living.</p><a href="pages/blog.html" class="blink">Read Article <i class="fas fa-arrow-right"></i></a></div>
+            <div class="bcard rev d2"><div class="btag">Strategy</div><h4>The ROI of Behavioral Ownership</h4><p>How investing in mindset delivers documented 3X improvements in organizational performance and retention.</p><a href="pages/blog.html" class="blink">Read Article <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+        <div style="text-align:center;margin-top:44px;">
+            <a href="pages/blog.html" class="btn btn-outline">View All Posts <i class="fas fa-arrow-right arr"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cstrip sec-xs">
+    <div class="wrap"><div class="cin rev">
+        <h2>If your people are not evolving, your business is not <em>growing.</em></h2>
+        <a href="pages/contact.html" class="btn btn-white" style="flex-shrink:0;">Get in Touch <i class="fas fa-arrow-right arr"></i></a>
+    </div></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="wrap">
+        <div class="fgrid">
+            <div>
+                <a href="index.html" class="fbrand">Dr. Krishnan <em>Chandrasekharan</em></a>
+                <p class="fdesc">Global Leadership Strategist & Executive Mentor. Transforming knowledge into behavioral ownership across 4 continents.</p>
+            </div>
+            <div class="fcol">
+                <h6>Navigation</h6>
+                <a href="index.html">Home</a><a href="pages/about.html">About</a>
+                <a href="pages/gallery.html">Visuals</a><a href="pages/videos.html">Showreel</a>
+                <a href="pages/blog.html">Blog</a><a href="pages/contact.html">Contact</a>
+            </div>
+            <div class="fcol">
+                <h6>Connect</h6>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin" style="margin-right:9px;"></i>LinkedIn</a>
+                <a href="https://wa.me/916300405352" target="_blank"><i class="fab fa-whatsapp" style="margin-right:9px;"></i>WhatsApp</a>
+                <a href="pages/contact.html"><i class="fas fa-envelope" style="margin-right:9px;"></i>Email</a>
+            </div>
+        </div>
+        <div class="fbot">
+            <p>&copy; 2026 Dr. Krishnan Chandrasekharan. All rights reserved.</p>
+            <div class="fsoc">
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/916300405352" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="pages/contact.html"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/916300405352" class="wa" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<!-- REVIEW MODAL -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="font-family:var(--font-display);font-size:1.55rem;font-weight:700;">Share Your Experience</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                        <div><label class="flb">Your Name *</label><input type="text" class="fc" placeholder="Full Name" required></div>
+                        <div><label class="flb">Email *</label><input type="email" class="fc" placeholder="your@email.com" required></div>
+                        <div><label class="flb">Organization</label><input type="text" class="fc" placeholder="Company / Organization"></div>
+                        <div><label class="flb">Designation</label><input type="text" class="fc" placeholder="Your Role / Title"></div>
+                        <div>
+                            <label class="flb">Area of Engagement *</label>
+                            <select class="fc" required style="cursor:pointer;">
+                                <option value="">Select...</option>
+                                <option>Corporate Training</option><option>Executive Coaching</option>
+                                <option>Workshop</option><option>Keynote Speaking</option>
+                                <option>Learning Program</option><option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="flb">Rating *</label>
+                            <div id="starRating" style="display:flex;gap:8px;margin-top:8px;">
+                                <i class="fas fa-star star" data-value="1" style="cursor:pointer;color:var(--blue-400);font-size:1.5rem;"></i>
+                                <i class="fas fa-star star" data-value="2" style="cursor:pointer;color:var(--blue-400);font-size:1.5rem;"></i>
+                                <i class="fas fa-star star" data-value="3" style="cursor:pointer;color:var(--blue-400);font-size:1.5rem;"></i>
+                                <i class="fas fa-star star" data-value="4" style="cursor:pointer;color:var(--blue-400);font-size:1.5rem;"></i>
+                                <i class="fas fa-star star" data-value="5" style="cursor:pointer;color:var(--blue-400);font-size:1.5rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:16px;"><label class="flb">Your Review *</label><textarea class="fc" rows="5" placeholder="Share your experience and the impact it had..." required></textarea></div>
+                    <div style="display:flex;gap:10px;align-items:flex-start;margin-top:16px;">
+                        <input type="checkbox" id="cons" required style="width:16px;height:16px;margin-top:2px;accent-color:var(--blue-500);">
+                        <label for="cons" style="font-size:13px;color:var(--grey-500);cursor:pointer;">I agree to have my review published on the website</label>
+                    </div>
+                    <button type="submit" class="btn btn-blue" style="width:100%;justify-content:center;margin-top:20px;border:none;">Submit Review <i class="fas fa-arrow-right arr"></i></button>
+                    <p style="text-align:center;font-size:12px;color:var(--grey-500);margin-top:12px;">✓ Your review will be visible after verification.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // NAV SCROLL
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 48));
+
+    // MOBILE
+    const ham = document.getElementById('ham'), drw = document.getElementById('drw');
+    ham.addEventListener('click', () => { ham.classList.toggle('op'); drw.classList.toggle('op'); });
+    drw.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('op'); drw.classList.remove('op'); }));
+
+    // REVEAL
+    const ro = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);} }), {threshold:0.12});
+    document.querySelectorAll('.rev').forEach(el => ro.observe(el));
+
+    // PROBLEM LINES
+    ['pl1','pl2','pl3'].forEach((id,i) => {
+        const el = document.getElementById(id); if(!el) return;
+        new IntersectionObserver(([e]) => { if(e.isIntersecting) setTimeout(()=>el.classList.add('lit'), i*280); }, {threshold:0.5}).observe(el);
+    });
+
+    // STARS
+    let rating = 5;
+    const stars = document.querySelectorAll('.star');
+    function updateStars(n){ stars.forEach((s,i)=>s.style.color=i<n?'var(--blue-500)':'var(--grey-200)'); }
+    stars.forEach(s => {
+        s.addEventListener('click',()=>{ rating=+s.dataset.value; updateStars(rating); });
+        s.addEventListener('mouseenter',()=>updateStars(+s.dataset.value));
+        s.addEventListener('mouseleave',()=>updateStars(rating));
+    });
+</script>
+</body>
+</html>
